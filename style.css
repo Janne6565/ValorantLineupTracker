@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.qrCode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  background-image: url('./assets/background1.jpg');
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.dots {
+  display: flex;
+  position: fixed;
+  right: 40px;
+  width: 10px;
+  z-index: 10;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dots > .dot {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background 1s ease;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+}
+
+.dots.active0 > .dot:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dots.active1 > .dot:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.info {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  align-content: center;
+  color: lightgray;
+}
+
+.info > h1 {
+  font-size: 50px;
+}
+
+.qrCode > img {
+  border-radius: 15px;
+}
+
+.pages {
+  position: relative;
+  transition: top ease 0.3s;
+}
+
+.page { 
+  height: 100vh;
+}
+
+.thisProject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  color: lightgray;
+  padding: 0 5%;
+  width: 90%;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 200%;
+  background-image: url('./assets/background2.jpg');
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: 0 -100px;
+}
+
+.thisProject > p {
+  justify-content: center;
+  display: flex;
+  text-align-last: center;
+  text-align: justify;
+  align-items: center;
+  align-content: center;  
+}
+
+.thisProject > p > a {
+  display: contents;
+}
+
+.lineUp {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.lineUp > img {
+  border-radius: 15px;
+}
+
+.lineUp > :nth-child(1){
+  position: absolute;
+  top: 0;
+}
+
+.lineUp > :nth-child(2){
+  width: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.lineUp > :nth-child(3){
+  position: absolute; 
+  width: 20%;
+  top: 0;
+  left: 0;
+}
+

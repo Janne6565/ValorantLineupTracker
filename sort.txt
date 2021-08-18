@@ -1,0 +1,8 @@
+UPDATE `LineUps` SET `Comment` = 'Smoke A Screens from A Lobby' WHERE `LineUps`.`ID` = 10;
+UPDATE `LineUps` SET `Comment` = 'Smoke B Default from B Garage' WHERE `LineUps`.`ID` = 11;
+UPDATE `LineUps` SET `Comment` = 'Smoke Mid Top from B Lobby' WHERE `LineUps`.`ID` = 12;
+UPDATE `LineUps` SET `Comment` = 'Smoke Mid Top from B Lobby' WHERE `LineUps`.`ID` = 13;
+UPDATE `LineUps` SET `Comment` = 'Snake Bite B Default from B Screens' WHERE `LineUps`.`ID` = 14;
+UPDATE `LineUps` SET `Comment` = 'Smoke Screens from A' WHERE `LineUps`.`ID` = 15;
+UPDATE `LineUps` SET `Comment` = 'Snake Bite A Default from A Lobby' WHERE `LineUps`.`ID` = 16;
+UPDATE `LineUps` SET `Comment` = 'Snake Bite A 2nd from A Lobby' WHERE `LineUps`.`ID` = 17;

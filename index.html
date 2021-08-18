@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXMHXDX5E0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RXMHXDX5E0');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Valorant Lineup Tracker">
+    <meta name="keywords" content="Valorant Lineups, Viper Lineups, Valorant Tracker Lineups, Viper Valorant Lineups Tracker, Lineups, Lineup Tracker, Lineups Tracker">
+    <meta name="author" content="Janne Keipert">
+    <title>Valorant Lineup Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content" id="app">
+        <div class="informationsNotSel" v-if='lineUp==="-1"'>
+            <div v-bind:class="'dots active' + page">
+                <div class="dot" @click="page = 0"></div>
+                <div class="dot" @click="page = 1"></div>
+            </div>
+            <div class="pages" v-bind:style="pageRel">
+                <div class="qrCode page">
+                    <div class="info">
+                        <h1>Valorant Viper Lineups</h1>
+                        <p>Scan this QR Code with your phone to remotely controll this Website</p>
+                    </div>
+                    <img v-bind:src="qrCode" alt="">
+                </div>
+                <div class="thisProject page">
+                    <h1>About me</h1>
+                    <p>Hey, my Name is Janne, and i'm a 16 Year-Old boy who really likes Coding and Gaming.
+                        To connect both of it i created this small Lineup WebApp, which you can controll with your phone via the QR Code. This Project includes HTML, JS (Vue), CSS, PHP and some SQL. 👍 For feedback just send me a Mail to <a href="mailto:jannekeipert@gmx.de">jannekeipert@gmx.de</a>. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="lineUp" v-if='lineUp!=="-1"'>
+            <img v-bind:src="'./assets/lineup/' + lineUp + '.png'" alt="">
+            <img v-bind:src="'./assets/position/' + lineUp + '.png'" alt="">
+            <img v-bind:src="'./assets/result/' + lineUp + '.png'" alt="">
+        </div>
+        {{lineUp}}
+    </div>
+</body>
+<script src="./vue.min.js"></script>
+<script src="./main.js"></script>
+</html>
